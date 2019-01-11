@@ -3,7 +3,7 @@ MAINTAINER mcbplay1@gmail.com
 
 RUN apt-get update -y
 RUN apt-get upgrade -y
-RUN apt-get install php7.0 -y
+RUN apt-get install php7.1 -y
 WORKDIR /root
 RUN git clone https://github.com/DarkSecDevelopers/HiddenEye.git
 WORKDIR /root/HiddenEye
