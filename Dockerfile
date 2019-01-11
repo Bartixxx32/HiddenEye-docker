@@ -8,6 +8,6 @@ WORKDIR /root
 RUN git clone https://github.com/DarkSecDevelopers/HiddenEye.git
 WORKDIR /root/HiddenEye
 RUN pip3 install -r requirements.txt
-RUN chmod +x SocialFish.py
+RUN chmod +x HiddenEye.py
 RUN ln -s /root/HiddenEye/HiddenEye.py /bin/HiddenEye
 ENTRYPOINT ["/root/HiddenEye/HiddenEye.py"
