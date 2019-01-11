@@ -14,5 +14,9 @@ RUN git clone https://github.com/DarkSecDevelopers/HiddenEye.git
 WORKDIR /root/HiddenEye
 RUN pip3 install -r requirements.txt
 RUN chmod +x HiddenEye.py
+RUN wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip -O ngrok.zip
+RUN unzip ngrok.zip
+RUN rm -r ngrok.zip
+RUN mv ngrok Server/ngrok
 RUN ln -s /root/HiddenEye/HiddenEye.py /bin/HiddenEye
 ENTRYPOINT ["python3", "/root/HiddenEye/HiddenEye.py"]
