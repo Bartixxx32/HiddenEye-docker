@@ -7,7 +7,6 @@ RUN apt-get install sudo python3 python3-pip wget apt-transport-https lsb-releas
 RUN apt-get update -y
 RUN apt-get upgrade -y
 RUN echo "Europe/Poland" > /etc/timezone
-RUN dpkg-reconfigure -f noninteractive tzdata
 RUN apt-get install php7.2 -y
 WORKDIR /root
 RUN git clone https://github.com/DarkSecDevelopers/HiddenEye.git
