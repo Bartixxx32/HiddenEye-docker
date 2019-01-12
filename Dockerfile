@@ -1,13 +1,11 @@
-FROM ubuntu
+FROM python:3
 MAINTAINER mcbplay1@gmail.com
 
-RUN export DEBIAN_FRONTEND=noninteractive
 RUN apt-get update -y
 RUN apt-get upgrade -y
-RUN apt-get install tzdata -y
-RUN ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime
-RUN dpkg-reconfigure --frontend noninteractive tzdata
-RUN apt-get install sudo zip unzip git python3 python3-pip wget apt-transport-https lsb-release ca-certificates wget apt-utils -y
+RUN apt-get install sudo apt-utils apt-transport-https lsb-release ca-certificates wget -y
+RUN wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+RUN echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
 RUN apt-get update -y
 RUN apt-get upgrade -y
 RUN apt-get install php7.2 -y
