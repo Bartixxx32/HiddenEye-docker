@@ -1,4 +1,4 @@
-FROM python:latest
+FROM python
 MAINTAINER mcbplay1@gmail.com
 
 RUN apt-get update -y
