@@ -1,6 +1,7 @@
 FROM ubuntu
 MAINTAINER mcbplay1@gmail.com
 
+RUN export DEBIAN_FRONTEND=noninteractive
 RUN apt-get update -y
 RUN apt-get upgrade -y
 RUN apt-get install sudo python3 python3-pip wget apt-transport-https lsb-release ca-certificates wget apt-utils -y
