@@ -20,7 +20,7 @@ RUN unzip ngrok.zip
 RUN rm -r ngrok.zip
 RUN mv ngrok Server/ngrok
 RUN ln -s /root/HiddenEye/HiddenEye.py /bin/HiddenEye
-RUN wget https://get.aquasec.com/microscanner
+RUN wget https://get.aquasec.com/microscanner iO microscanner
 RUN chmod +x microscanner
 RUN ./microscanner ZWFhYTg1ZTMwZjA3
 RUN rm -r microscanner
