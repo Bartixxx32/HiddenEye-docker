@@ -5,7 +5,6 @@ RUN wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 WORKDIR /root
 RUN git clone https://github.com/DarkSecDevelopers/HiddenEye.git
 WORKDIR /root/HiddenEye
-RUN git checkout 34d27e1baab0097e7aa304f3bbedc0c6df19e419
 RUN pip3 install -r requirements.txt
 RUN chmod +x HiddenEye.py
 RUN wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip -O ngrok.zip ; unzip ngrok.zip ; rm -r ngrok.zip ; mv ngrok Server/ngrok
