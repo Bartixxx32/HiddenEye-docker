@@ -1,6 +1,6 @@
 
 # HiddenEye Docker
-**To use HiddenEye as docker type this command into terminal**
+**To use HiddenEye in docker type this command into terminal**
 
     docker pull "bartixxx32/hidden-eye" && docker run -it --rm "bartixxx32/hidden-eye"
 
